@@ -18,8 +18,7 @@ class BaseViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
-      //  setupLayout()
+        setupLayout()
     }
     
     private func setupLayout() {
@@ -27,7 +26,7 @@ class BaseViewController: UIViewController {
         
         baseView.snp.makeConstraints { make in
             make.top.equalToSuperview()
-            make.centerX.equalToSuperview()
+            make.leading.trailing.equalToSuperview()
             make.bottom.equalToSuperview()
         }
     }
